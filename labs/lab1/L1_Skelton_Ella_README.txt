@@ -13,7 +13,7 @@ Code also checked with: https://validator.w3.org/nu/#file, and https://jigsaw.w3
 
 ## Authors
 
-* Ella Skelton (eskelton@dal.ca) - Author
+* Ella Skelton (el423421@dal.ca) - Author
 
 
 ## Built With
