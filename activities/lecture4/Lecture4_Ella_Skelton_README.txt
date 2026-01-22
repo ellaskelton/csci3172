@@ -10,7 +10,7 @@ This activity is basic JavaScript concepts including variables, data types, and 
 
 ## Authors
 
-* [Ella Skelton](ella.skelton@dal.ca)
+* [Ella Skelton](el423421@dal.ca)
 
 
 ## Built With
