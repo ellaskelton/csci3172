@@ -45,5 +45,5 @@ N/A
 ## Acknowledgments
 
 CSCI 1170
-CSCI 2171
+CSCI 2170
 CSCI 3172
