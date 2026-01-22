@@ -1,11 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSCI 3172 Lab 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ella Skelton - Sewing and Creating Portfolio">
+  <title>Ella Skelton | Lab1</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Lab 1</h1>
-  <p>Timberlea setup works.</p>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#home" class="logo">Lab1</a>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <img src="images/star.png" alt="" class="corner-star star-top-left star-1" loading="lazy">
+        <img src="images/star.png" alt="" class="corner-star star-top-left star-2" loading="lazy">
+        <img src="images/star.png" alt="" class="corner-star star-bottom-right" loading="lazy">
+        <h1>Ella Skelton</h1>
+        <p class="tagline">My Portfolio</p>
+      </div>
+      <div class="hero-image">
+        <!-- Image Credit: Singer Heavy Duty 4452 Rosewater Pink Sewing Machine from https://ca.pinterest.com/pin/342203271709991858/ -->
+        <img src="images/sewing-machine.png" alt="Pink Singer sewing machine" loading="eager">
+      </div>
+    </div>
+    <div class="scroll-indicator"></div>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-subtitle">Concept sketches to final products</p>
+    
+    <div class="projects-container">
+      <!-- Jacket -->
+      <article class="project-card">
+        <img src="images/star.png" alt="" class="corner-star star-top-right" loading="lazy">
+        <div class="project-images-gallery">
+          <div class="image-stack">
+            <img src="images/jacket-sketch.jpg" alt="Jacket front and back design sketch" class="stack-image img-1 active" data-index="0" loading="lazy">
+            <img src="images/jacket-pattern.jpg" alt="Jacket section pattern layout" class="stack-image img-2" data-index="1" loading="lazy">
+            <img src="images/jacket-fabric.jpg" alt="Blue floral pattern design for jacket lining" class="stack-image img-3" data-index="2" loading="lazy">
+          </div>
+          
+          <div class="gallery-controls">
+            <div class="gallery-thumbnails">
+              <img src="images/jacket-sketch.jpg" alt="Jacket front and back design sketch" class="thumbnail active" data-index="0" loading="lazy">
+              <img src="images/jacket-pattern.jpg" alt="Jacket section pattern layout" class="thumbnail" data-index="1" loading="lazy">
+              <img src="images/jacket-fabric.jpg" alt="Blue floral pattern design for jacket lining" class="thumbnail" data-index="2" loading="lazy">
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-content-wrapper">
+          <div class="project-header-section">
+            <h3>Flipped Quilted Jacket</h3>
+            <p>A custom-designed jacket made from a blue floral and cream quilt rescued from a thrift bin. The design plan includes detailed seam allowances and the addition of a contrasting blue collar accent.</p>
+            <div class="project-tags">
+              <span class="tag">Pattern Design</span>
+              <span class="tag">Garment Construction</span>
+              <span class="tag">Quilted Lining</span>
+              <span class="tag">Sustainable Thrift Flip</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Paper Mache -->
+      <article class="project-card">
+        <img src="images/star.png" alt="" class="corner-star star-bottom-left" loading="lazy">
+        <div class="project-images-gallery">
+          <div class="image-stack">
+            <img src="images/lily-sketch.jpg" alt="Flower design sketch with color palette" class="stack-image img-1 active" data-index="0" loading="lazy">
+            <img src="images/lily-progress.png" alt="Lily sculpture mid-process with newspaper" class="stack-image img-2" data-index="1" loading="lazy">
+            <img src="images/lily-final.png" alt="Finished pink lily paper mache sculpture" class="stack-image img-3" data-index="2" loading="lazy">
+          </div>
+          
+          <div class="gallery-controls">
+            <div class="gallery-thumbnails">
+              <img src="images/lily-sketch.jpg" alt="Flower design sketch with color palette" class="thumbnail active" data-index="0" loading="lazy">
+              <img src="images/lily-progress.png" alt="Lily sculpture mid-process with newspaper" class="thumbnail" data-index="1" loading="lazy">
+              <img src="images/lily-final.png" alt="Finished pink lily paper mache sculpture" class="thumbnail" data-index="2" loading="lazy">
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-content-wrapper">
+          <div class="project-header-section">
+            <h3>Stargazer Lily Sculpture</h3>
+            <p>A 2-foot-wide stargazer lily made with wire framing, cardboard supports, and layered paper mache. It’s hand-painted in soft pinks and magentas with a bright green center, and finished with a wood finish.</p>
+              <div class="project-tags">
+              <span class="tag">Paper Mache</span>
+              <span class="tag">Sculpture</span>
+              <span class="tag">Mixed Media</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2 class="section-title">My Process</h2>
+    
+    <div class="process-timeline">
+      <div class="process-step">
+        <h3>Sketch & Visualized</h3>
+        <p>Every project starts with rough sketches and color palettes. I like mapping out the vision before touching any materials.</p>
+      </div>
+      <div class="process-step">
+        <h3>Plan & Prepare</h3>
+        <p>I like to plan things ahead, such as material cost, fabric size, and overall layout. Taking time to plan upfront helps everything come together more smoothly in the end.</p>
+      </div>
+      <div class="process-step">
+        <h3>Create</h3>
+        <p>This is where the hands-on work happens — cutting fabric, layering paper mache, and stitching seams. This stage is about turning plans into something physical.</p>
+      </div>
+      <div class="process-step">
+        <h3>Refine & Finish</h3>
+        <p>The final steps focus on details like painting, pressing seams, and adding small finishing touches that complete the piece.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <img src="images/star.png" alt="" class="corner-star star-top-left" loading="lazy">
+        <h3>Hello, my name is Ella!</h3>
+        <p>I’m a computer science student at Dalhousie University who enjoys combining sewing with coding. I like working with my hands, whether that’s sewing, paper mache, or building apps.</p>
+         <p>Right now, I'm working on a sewing pattern app centered around a sketch feature that lets you turn 2D designs into simple 3D previews and try out different colors and fabrics. One feature of the app focuses on laying patterns on fabric in a more cost-efficient way, helping reduce waste and use less material. It's still a work in progress, but finishing it this year is one of my goals :)</p>
+      </div>
+      <div class="about-image">
+        <!-- Image Credits: 
+             - Sewing mat from Pinterest https://ca.pinterest.com/pin/229120699787122870/
+             - Different colors linen fabric from Freepik https://www.freepik.com/premium-photo/different-colors-linen-fabric_26566855.htm -->
+        <img src="images/sewing-matt.jpg" alt="Pink cutting mat" class="mat-image" loading="lazy">
+        <img src="images/fabric-spools.avif" alt="Colorful spools of fabric and thread" class="spools-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Lab 1 - About Me Website</strong></p>
+    <p>Ella Skelton · CSCI 3172 · 2026</p>
+    <p><a href="https://git.cs.dal.ca/eskelton/csci3172">GitLab</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+
 </body>
 </html>
