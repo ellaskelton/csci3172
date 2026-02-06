@@ -1,0 +1,88 @@
+
+body {
+	background-color: #f5f6fa;
+}
+
+body .container {
+	background-color: #fff;
+	margin-top: 5em;
+	border: solid #dcdde1 thin;
+	padding: 2.5em;
+	border-radius: 8px;
+}
+
+h1 {
+	color: #2c3e50;
+	margin-bottom: 1.5em;
+}
+
+h3 {
+	color: #34495e;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+
+#addCreatureForm label, #addCreatureForm button {
+	font-size: 1.2em;
+	margin-top: 1em;
+}
+
+#addCreatureForm button {
+	margin-bottom: 1em;
+}
+
+#addCreatureForm input, #addCreatureForm textarea {
+	padding: 1.5em;
+}
+
+.search-section {
+	background-color: #ecf0f1;
+	padding: 1.5em;
+	border-radius: 5px;
+	margin-bottom: 2em;
+}
+
+.search-section label {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+	border-radius: 8px 8px 0 0;
+	width: 100%;
+}
+
+.card-title {
+	color: #2c3e50;
+	font-weight: bold;
+}
+
+.card-text {
+	color: #555;
+}
+
+.btn-danger {
+	margin-top: 0.5em;
+}
+
+.text-danger {
+	color: #e74c3c;
+}
+
+ul li {
+	padding: .6em;
+	font-size: 1em;
+	font-style: italic;
+}
