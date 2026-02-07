@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8f9fa;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    color: #880e4f;
+    padding: 40px 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(136, 14, 79, 0.1);
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 8px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 0.95em;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.nav-link {
+    color: #880e4f;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+main {
+    padding: 40px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #fce4ec;
+    color: #880e4f;
+}
+
+thead th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.85em;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+    background: #fef5f8;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 16px 20px;
+    font-size: 0.95em;
+}
+
+.student-link {
+    color: #c2185b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.student-link:hover {
+    color: #880e4f;
+    text-decoration: underline;
+}
+
+.missing-grade {
+    color: #e57373;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.info-box {
+    background: #fef5f8;
+    border-left: 3px solid #f8bbd0;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.info-box p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.course-section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: #fafafa;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.course-section h2 {
+    color: #880e4f;
+    margin-bottom: 24px;
+    font-size: 1.6em;
+    font-weight: 400;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #fce4ec;
+}
+
+.course-details-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.course-details-table thead {
+    background: #fce4ec;
+    color: #880e4f;
+}
+
+.course-details-table th {
+    padding: 14px 16px;
+    font-size: 0.85em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.course-details-table td {
+    padding: 14px 16px;
+    font-size: 0.9em;
+}
+
+.total-row {
+    background: #fef5f8;
+    font-weight: 500;
+}
+
+.total-row td {
+    border-top: 2px solid #fce4ec;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+footer {
+    background: #fafafa;
+    padding: 24px;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid #f0f0f0;
+    font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    header {
+        padding: 30px 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .container {
+        border-radius: 8px;
+    }
+    
+    main {
+        padding: 24px 20px;
+    }
+    
+    table {
+        font-size: 0.85em;
+    }
+    
+    thead th,
+    td {
+        padding: 12px 14px;
+    }
+    
+    .course-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .course-section h2 {
+        font-size: 1.4em;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+    }
+    
+    header {
+        background: #fce4ec;
+    }
+    
+    .nav-link {
+        display: none;
+    }
+}
