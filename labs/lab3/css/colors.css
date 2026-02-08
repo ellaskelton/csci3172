@@ -1,0 +1,24 @@
+:root {
+    --background-dark: #1a0d2e;
+    --background-medium: #2d1b3d;
+    
+    --text-white: #f5e6d3;
+    --text-gold: #ffd700;
+    --text-gold-light: #d4af37;
+    
+    --panel-background: rgba(45, 27, 61, 0.7);
+    --panel-background-light: rgba(30, 15, 50, 0.7);
+    --panel-background-dark: rgba(20, 10, 35, 0.7);
+    
+    --border-brown: rgba(139, 69, 19, 0.3);
+    --border-gold: rgba(255, 215, 0, 0.5);
+    
+    --color-gold: rgba(255, 215, 0, 0.6);
+    --color-purple: rgba(138, 43, 226, 0.5);
+    --color-green: rgba(0, 128, 0, 0.5);
+    --color-orange: rgba(255, 140, 0, 0.1);
+    --color-red: rgba(220, 20, 60, 0.6);
+    
+    --shadow: rgba(0, 0, 0, 0.6);
+    --shadow-dark: rgba(0, 0, 0, 0.7);
+}
