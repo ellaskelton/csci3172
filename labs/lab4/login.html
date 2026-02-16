@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>User Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username <span class="required">*</span></label>
+                    <input type="text" id="loginUsername" name="username" required>
+                    <span class="error-message" id="loginUsernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password <span class="required">*</span></label>
+                    <input type="password" id="loginPassword" name="password" required>
+                    <span class="error-message" id="loginPasswordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="loginBtn">Login</button>
+                </div>
+
+                <div class="success-message" id="loginSuccessMessage"></div>
+                <div class="error-message" id="loginErrorMessage"></div>
+            </form>
+
+            <div class="link-container">
+                <p>Don't have an account? <a href="index.html">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

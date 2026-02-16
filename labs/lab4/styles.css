@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff9ecf 0%, #ffc0e7 50%, #ffb3d9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-wrapper {
+    background: #fff5f9;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
+    border: 2px solid #ffc0e7;
+}
+
+h1 {
+    text-align: center;
+    color: #d81b60;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c2185b;
+    font-weight: 500;
+}
+
+.required {
+    color: #e91e63;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffb3d9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #fff;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #ff69b4;
+    background-color: #fff5f9;
+}
+
+input.valid {
+    border-color: #ff69b4;
+    background-color: #ffe4f0;
+}
+
+input.invalid {
+    border-color: #e91e63;
+    background-color: #ffeef5;
+}
+
+.error-message {
+    display: block;
+    color: #e91e63;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.success-message {
+    display: block;
+    color: #c2185b;
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #ffe4f0;
+    border: 2px solid #ffb3d9;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.password-requirements {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #fff5f9;
+    border: 1px solid #ffc0e7;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.password-requirements small {
+    display: block;
+    margin-bottom: 8px;
+    color: #c2185b;
+    font-weight: 600;
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.password-requirements li {
+    padding: 4px 0;
+    color: #d81b60;
+    transition: color 0.3s ease;
+}
+
+.password-requirements li.requirement-met {
+    color: #ff69b4;
+}
+
+.password-requirements li.requirement-unmet {
+    color: #e91e63;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #ff69b4 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ff1493 100%);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #ffc0e7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ffc0e7;
+}
+
+.link-container p {
+    color: #c2185b;
+    font-size: 14px;
+}
+
+.link-container a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link-container a:hover {
+    color: #ff1493;
+    text-decoration: underline;
+}
