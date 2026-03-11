@@ -1,0 +1,25 @@
+{
+  "name": "csci3172-lab5",
+  "version": "1.0.0",
+  "description": "Lab 5: Music Discovery – Netlify (Express + serverless-http)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site – no build'",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": ["lab5", "netlify", "csci3172", "music-discovery"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "serverless-http": "^3.2.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "jsdom": "^25.0.0"
+  }
+}
