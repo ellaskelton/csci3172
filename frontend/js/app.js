@@ -123,7 +123,7 @@
     relatedSubtitle.textContent = 'Artists similar to ' + artist.name;
     relatedList.innerHTML = '<li class="loading">Loading…</li>';
     try {
-      const artists = await apiGet('/related', { name: artist.name });
+      const artists = await apiGet('/related', { id: artist.id });
       relatedList.innerHTML = '';
       if (!artists.length) {
         relatedList.innerHTML = '<li class="no-results">No similar artists found.</li>';

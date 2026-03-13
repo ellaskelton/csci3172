@@ -27,10 +27,10 @@ describe("Music Discovery API", () => {
     expect(res.body.error).toMatch(/query parameter: q/i);
   });
 
-  it("should return 400 for GET /api/related without name", async () => {
+  it("should return 400 for GET /api/related without id", async () => {
     const res = await request(api).get("/api/related");
     expect(res.statusCode).toBe(400);
-    expect(res.body.error).toMatch(/query parameter: name/i);
+    expect(res.body.error).toMatch(/query parameter: id/i);
   });
 
   it("should map MusicBrainz search results to simplified items", async () => {
@@ -63,23 +63,40 @@ describe("Music Discovery API", () => {
     });
   });
 
-  it("should return an array of related artists from /api/related", async () => {
-    jest.spyOn(global, "fetch").mockResolvedValue({
+  it("should return an array of related artists from /api/related using tag search", async () => {
+    const fetchMock = jest.spyOn(global, "fetch");
+
+    // First call: artist with tags
+    fetchMock.mockResolvedValueOnce({
       ok: true,
       json: async () => ({
-        artists: [
-          { id: "a1", name: "Similar One", disambiguation: "", country: "" },
-          { id: "a2", name: "Similar Two", disambiguation: "pop", country: "CA" },
+        id: "artist-1",
+        name: "Test Artist",
+        tags: [
+          { name: "hip hop", count: 5 },
+          { name: "pop", count: 2 },
         ],
       }),
       text: async () => "",
     });
 
-    const res = await request(api).get("/api/related?name=Example");
+    // Second call: tag search results
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        artists: [
+          { id: "other-1", name: "Similar One", disambiguation: "", country: "" },
+          { id: "other-2", name: "Similar Two", disambiguation: "hip hop", country: "US" },
+        ],
+      }),
+      text: async () => "",
+    });
+
+    const res = await request(api).get("/api/related?id=artist-1");
     expect(res.statusCode).toBe(200);
     expect(Array.isArray(res.body)).toBe(true);
     expect(res.body.length).toBe(2);
     expect(res.body[0]).toHaveProperty("name", "Similar One");
-    expect(res.body[1]).toHaveProperty("disambiguation", "pop");
+    expect(res.body[1]).toHaveProperty("disambiguation", "hip hop");
   });
 });
