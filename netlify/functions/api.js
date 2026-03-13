@@ -8,10 +8,10 @@ import serverless from "serverless-http";
 const api = express();
 const router = express.Router();
 
-const MUSICBRAINZ_BASE = "https://musicbrainz.org/ws/2";
+const MUSICBRAINZ_BASE = "https://musicbrainz.org/ws/2/";
 
 async function searchArtists(query, limit = 10) {
-  const url = new URL("/artist", MUSICBRAINZ_BASE);
+  const url = new URL("artist", MUSICBRAINZ_BASE);
   url.searchParams.set("query", query);
   url.searchParams.set("fmt", "json");
   url.searchParams.set("limit", String(limit));
