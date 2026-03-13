@@ -42,4 +42,17 @@ describe("Music Discovery UI", () => {
     expect(document.querySelector("#results-section")).not.toBeNull();
     expect(document.querySelector("#related-section")).not.toBeNull();
   });
+
+  it("should have a hero section with quick-pick buttons", () => {
+    const hero = document.querySelector("#hero");
+    expect(hero).not.toBeNull();
+    const quickPicks = document.querySelectorAll(".quick-pick");
+    expect(quickPicks.length).toBeGreaterThanOrEqual(1);
+  });
+
+  it("should have an error section for displaying messages", () => {
+    const errorSection = document.querySelector("#error-section");
+    expect(errorSection).not.toBeNull();
+    expect(errorSection.getAttribute("role")).toBe("alert");
+  });
 });

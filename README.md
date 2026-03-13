@@ -1,10 +1,13 @@
 # Lab 5 - Music Discovery
 
-* *Date Created*: 10 March 2026
-* *Last Modification Date*: 12 March 2026
-* *Lab Timberlea URL*: <https://web.cs.dal.ca/~eskelton/csci3172/labs/lab5/>
-* *Lab Netlify URL*: 
+Music Discovery is a web application that lets users search for artists by name and view “similar” artist recommendations. The homepage includes quick-pick popular artists, a search form, and side‑by‑side panels showing search results and recommended artists, all powered by the public MusicBrainz Web Service and a Node.js/Express backend deployed on Netlify.
+
+* *Date Created*: 10 March 2026  
+* *Last Modification Date*: 12 March 2026  
+* *Lab Timberlea URL*: <https://web.cs.dal.ca/~eskelton/csci3172/labs/lab5/>  
+* *Lab Netlify URL*: <https://sprightly-valkyrie-573990.netlify.app/>
 * *Lab Gitlab URL*: <https://git.cs.dal.ca/eskelton/csci3172>
+
 
 ## Authors
 
@@ -12,17 +15,24 @@ If what is being submitted is an individual Lab or Assignment, you may simply in
 
 * [Ella](el423421@dal.ca) - (Author)
 
+
 ## Built With
 
-* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - Markup language for structuring web pages
-* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Styling language for web pages
-* [JavaScript ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Programming language for web interactivity
-* [Node.js](https://nodejs.org/) - Runtime for the serverless API (Netlify Functions)
-* [Express](https://expressjs.com/) - Backend API (used with serverless-http on Netlify)
-* [Netlify](https://www.netlify.com/) - Hosting and serverless functions for deployment
-* [Spotify Web API](https://developer.spotify.com/documentation/web-api) - Artist search and related-artists recommendations (API keys stored in Netlify env; frontend in `frontend/`, API in `netlify/functions/api.js`)
-* [Jest](https://jestjs.io/), [Supertest](https://github.com/ladjs/supertest), [JSDOM](https://github.com/jsdom/jsdom) - Unit and integration testing (run with `npm test`)
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - Markup language for structuring the Music Discovery pages  
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Styling for the responsive, dark-themed UI and layout  
+* [JavaScript ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Client-side logic (search form, quick picks, rendering results, Fetch API calls)  
+* [Node.js](https://nodejs.org/) - Runtime for the Netlify Function backend  
+* [Express](https://expressjs.com/) - Backend routing for the `/api/health`, `/api/search`, and `/api/related` endpoints  
+* [Netlify](https://www.netlify.com/) - Hosting for the static frontend and serverless backend functions  
+* [MusicBrainz Web Service](https://musicbrainz.org/doc/MusicBrainz_API) - Public API used to search artists and derive simple “related artist” suggestions  
+* [Jest](https://jestjs.io/), [Supertest](https://github.com/ladjs/supertest), [JSDOM](https://github.com/jsdom/jsdom) - Testing libraries for backend and frontend unit tests  
+
+
+## Sources Used
+
+N.A
+
 
 ## Acknowledgments
 
-* 3172, 2171, 1170 CSCI course work :)
+* CSCI 3172, 2171, 1170 course materials for general web development concepts  

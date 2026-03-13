@@ -1,6 +1,6 @@
 /**
  * Music Discovery – client-side logic
- * Calls the Netlify serverless API (Spotify proxy) for search and related artists.
+ * Calls the Netlify serverless API (MusicBrainz proxy) for search and \"related\" artists.
  */
 
 (function () {
@@ -16,6 +16,7 @@
   const relatedSubtitle = document.getElementById('related-subtitle');
   const relatedList = document.getElementById('related-list');
   const errorSection = document.getElementById('error-section');
+  const quickPickButtons = document.querySelectorAll('.quick-pick');
 
   function setStatus(text, type) {
     if (!apiStatus) return;
@@ -54,27 +55,24 @@
   function renderArtistItem(artist, onClick) {
     const li = document.createElement('li');
     li.className = 'artist-card';
-    const img = artist.images && artist.images[0];
-    const imgEl = img
-      ? document.createElement('img')
-      : null;
-    if (imgEl) {
-      imgEl.src = img.url;
-      imgEl.alt = '';
-      imgEl.width = 64;
-      imgEl.height = 64;
-    }
+
     const text = document.createElement('div');
     text.className = 'artist-card-text';
+
     const name = document.createElement('span');
     name.className = 'artist-name';
     name.textContent = artist.name;
-    const genres = document.createElement('span');
-    genres.className = 'artist-genres';
-    genres.textContent = (artist.genres || []).slice(0, 3).join(', ') || '—';
-    text.append(name, document.createElement('br'), genres);
-    if (imgEl) li.appendChild(imgEl);
+
+    const meta = document.createElement('span');
+    meta.className = 'artist-genres';
+    const bits = [];
+    if (artist.disambiguation) bits.push(artist.disambiguation);
+    if (artist.country) bits.push(artist.country);
+    meta.textContent = bits.join(' • ') || '—';
+
+    text.append(name, document.createElement('br'), meta);
     li.appendChild(text);
+
     if (onClick) {
       li.setAttribute('role', 'button');
       li.tabIndex = 0;
@@ -125,7 +123,7 @@
     relatedSubtitle.textContent = 'Artists similar to ' + artist.name;
     relatedList.innerHTML = '<li class="loading">Loading…</li>';
     try {
-      const artists = await apiGet('/related', { id: artist.id });
+      const artists = await apiGet('/related', { name: artist.name });
       relatedList.innerHTML = '';
       if (!artists.length) {
         relatedList.innerHTML = '<li class="no-results">No similar artists found.</li>';
@@ -150,10 +148,21 @@
       await apiGet('/health');
       setStatus('Ready. Search for an artist above.');
     } catch (err) {
-      setStatus('Server or Spotify not configured. Set env vars in Netlify and try again.');
+      setStatus('Server or MusicBrainz not reachable. Try again later.');
     }
   }
 
   if (form) form.addEventListener('submit', onSearch);
+
+  quickPickButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (!queryInput || !form) return;
+      const name = btn.dataset.artist || btn.textContent.trim();
+      if (!name) return;
+      queryInput.value = name;
+      form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    });
+  });
+
   checkHealth();
 })();

@@ -13,6 +13,21 @@
   </header>
 
   <main id="main-content" role="main">
+    <section id="hero" aria-labelledby="hero-heading">
+      <h2 id="hero-heading">Discover your next favourite artist</h2>
+      <p class="hero-text">
+        Start with one of these popular artists or search for any name. Click a result to explore similar artists.
+      </p>
+      <div class="quick-picks" role="list">
+        <button type="button" class="quick-pick" data-artist="Drake" role="listitem">Drake</button>
+        <button type="button" class="quick-pick" data-artist="Tyler, the Creator" role="listitem">Tyler the Creator</button>
+        <button type="button" class="quick-pick" data-artist="Childish Gambino" role="listitem">Childish Gambino</button>
+        <button type="button" class="quick-pick" data-artist="Daniel Caesar" role="listitem">Daniel Caesar</button>
+        <button type="button" class="quick-pick" data-artist="SZA" role="listitem">SZA</button>
+        <button type="button" class="quick-pick" data-artist="Lana Del Rey" role="listitem">Lana Del Rey</button>
+      </div>
+    </section>
+
     <section aria-labelledby="search-heading">
       <h2 id="search-heading">Search for an artist</h2>
       <p id="search-hint">Enter an artist name to search. Then pick an artist to see similar recommendations.</p>
@@ -32,22 +47,24 @@
       <p id="api-status" class="status-message" aria-live="polite" aria-atomic="true"></p>
     </section>
 
-    <section id="results-section" aria-labelledby="results-heading" class="hidden">
-      <h2 id="results-heading">Search results</h2>
-      <ul id="artist-list" class="artist-list" role="list"></ul>
-    </section>
+    <div class="results-grid">
+      <section id="results-section" aria-labelledby="results-heading" class="hidden">
+        <h2 id="results-heading">Search results</h2>
+        <ul id="artist-list" class="artist-list" role="list"></ul>
+      </section>
 
-    <section id="related-section" aria-labelledby="related-heading" class="hidden">
-      <h2 id="related-heading">Similar artists</h2>
-      <p id="related-subtitle" class="subtitle"></p>
-      <ul id="related-list" class="artist-list related-list" role="list"></ul>
-    </section>
+      <section id="related-section" aria-labelledby="related-heading" class="hidden">
+        <h2 id="related-heading">Similar artists</h2>
+        <p id="related-subtitle" class="subtitle"></p>
+        <ul id="related-list" class="artist-list related-list" role="list"></ul>
+      </section>
+    </div>
 
     <section id="error-section" class="error-message hidden" role="alert" aria-live="assertive"></section>
   </main>
 
   <footer role="contentinfo">
-    <p>Music Discovery – CSCI 3172 Lab 5. Powered by Spotify Web API.</p>
+    <p>Music Discovery – CSCI 3172 Lab 5. Powered by the MusicBrainz Web Service.</p>
   </footer>
 
   <script src="js/app.js"></script>
