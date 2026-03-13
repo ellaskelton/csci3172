@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Discovery | Lab 5 – CSCI 3172</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header role="banner">
+    <h1>Music Discovery</h1>
+    <p class="tagline">Find artists and discover similar music – Lab 5, Winter 2026</p>
+  </header>
+
+  <main id="main-content" role="main">
+    <section aria-labelledby="search-heading">
+      <h2 id="search-heading">Search for an artist</h2>
+      <p id="search-hint">Enter an artist name to search. Then pick an artist to see similar recommendations.</p>
+      <form id="search-form" role="search" aria-label="Artist search">
+        <label for="artist-query" class="visually-hidden">Artist name</label>
+        <input
+          type="search"
+          id="artist-query"
+          name="q"
+          placeholder="e.g. Radiohead, Dua Lipa"
+          autocomplete="off"
+          required
+          aria-describedby="search-hint"
+        >
+        <button type="submit">Search</button>
+      </form>
+      <p id="api-status" class="status-message" aria-live="polite" aria-atomic="true"></p>
+    </section>
+
+    <section id="results-section" aria-labelledby="results-heading" class="hidden">
+      <h2 id="results-heading">Search results</h2>
+      <ul id="artist-list" class="artist-list" role="list"></ul>
+    </section>
+
+    <section id="related-section" aria-labelledby="related-heading" class="hidden">
+      <h2 id="related-heading">Similar artists</h2>
+      <p id="related-subtitle" class="subtitle"></p>
+      <ul id="related-list" class="artist-list related-list" role="list"></ul>
+    </section>
+
+    <section id="error-section" class="error-message hidden" role="alert" aria-live="assertive"></section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Music Discovery – CSCI 3172 Lab 5. Powered by Spotify Web API.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

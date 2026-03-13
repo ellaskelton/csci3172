@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Potions - Inventory Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mystic Potions Shop</h1>
+            <p class="subtitle">Magical Inventory Management System</p>
+        </header>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <h2>Add New Item</h2>
+                <div class="input-group">
+                    <input type="text" id="itemName" placeholder="Item Name">
+                    <input type="text" id="itemType" placeholder="Type (e.g., healing)">
+                    <input type="text" id="itemImage" placeholder="Image path (e.g., img/potion.png)">
+                    <input type="number" id="itemPrice" placeholder="Price" step="0.01">
+                    <input type="number" id="itemQuantity" placeholder="Quantity">
+                    <textarea id="itemDescription" placeholder="Description"></textarea>
+                    <button onclick="handleAddItem()" class="btn btn-add">Add Item</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h2>Search & View</h2>
+                <div class="input-group">
+                    <input type="text" id="searchQuery" placeholder="Search by name or type...">
+                    <button onclick="handleSearch()" class="btn btn-search">Search</button>
+                    <button onclick="listItems()" class="btn btn-list">Show All Items</button>
+                    <button onclick="calculateTotalValue()" class="btn btn-calculate">Total Value</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h2>Advanced Features</h2>
+                <div class="input-group">
+                    <button onclick="groupByCategory()" class="btn btn-bonus">Group by Category</button>
+                    <button onclick="findDuplicates()" class="btn btn-bonus">Find Duplicates</button>
+                    <input type="number" id="discountPercentage" placeholder="Discount %" min="0" max="100">
+                    <button onclick="handleApplyDiscount()" class="btn btn-bonus">Apply Discount</button>
+                    <div id="discountDisplay" class="discount-display" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-panel">
+            <div class="stat-card">
+                <span class="stat-label">Total Items:</span>
+                <span class="stat-value" id="totalItems">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Total Value:</span>
+                <span class="stat-value" id="totalValue">$0.00</span>
+            </div>
+        </div>
+
+        <div class="inventory-display">
+            <h2>Inventory</h2>
+            <div id="inventoryContainer" class="inventory-grid">
+                <!-- Items will be inserted here -->
+            </div>
+        </div>
+
+        <div id="messageArea" class="message-area"></div>
+    </div>
+
+    <div id="particles-container" class="particles-container"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* For information on how to implement Bootstrap and how to apply your own custom CSS, visit: https://getbootstrap.com/docs/5.3/getting-started/introduction/  */
+body {
+	background: linear-gradient(135deg, #ffeef5 0%, #ffd6e8 100%);
+	min-height: 100vh;
+}
+
+body .container {
+	background-color: #fff;
+	margin-top: 5em;
+	border: solid #ffb3d9 2px;
+	border-radius: 15px;
+	padding: 2.5em;
+	box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+}
+
+h1 {
+	color: #ff69b4;
+	font-weight: 600;
+	margin-bottom: 1.5em;
+}
+
+#registrationForm .form-group label {
+	color: #d81b60;
+	font-weight: 500;
+}
+
+#registrationForm .form-control {
+	border-color: #ffb3d9;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+#registrationForm .form-control:focus {
+	border-color: #ff69b4;
+	box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+#registrationForm .form-check-inline {
+	padding-left: 1em;
+}
+
+#registrationForm .form-check-inline label {
+	padding-right: 0.5em;
+	color: #d81b60;
+}
+
+#registrationForm .form-check-inline input[type="checkbox"] {
+	margin-right: 2em;
+	accent-color: #ff69b4;
+}
+
+input.active {
+	border-color: #ffb3d9;
+	background-color: #ffeef5;
+}
+
+#submitButton {
+	background-color: #ff69b4;
+	border-color: #ff69b4;
+	color: white;
+	border-radius: 8px;
+	padding: 0.75em 2em;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+#submitButton:hover {
+	background-color: #ff1493;
+	border-color: #ff1493;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+}
+
+.success {
+	border: 1px solid #ffb3d9;
+	background-color: #ffeef5;
+	color: #d81b60;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 8px;
+}
