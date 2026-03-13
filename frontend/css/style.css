@@ -1,14 +1,14 @@
 
 
 :root {
-  --color-bg: #f9fafb;
+  --color-bg: #fff7fb;
   --color-surface: #ffffff;
-  --color-surface-soft: #f3f4f6;
+  --color-surface-soft: #fdf2f8;
   --color-text: #111827;
   --color-text-muted: #6b7280;
-  --color-accent: #6366f1;
-  --color-accent-hover: #4f46e5;
-  --color-border: #e5e7eb;
+  --color-accent: #ec4899;
+  --color-accent-hover: #db2777;
+  --color-border: #f9a8d4;
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -70,8 +70,8 @@ section + section {
   margin-bottom: 1.75rem;
   padding: 1.25rem 1rem;
   border-radius: 0.75rem;
-  background: radial-gradient(circle at top left, #e0e7ff, #eef2ff 60%);
-  border: 1px solid #e0e7ff;
+  background: radial-gradient(circle at top left, #fce7f3, #fee2e2 60%);
+  border: 1px solid #f9a8d4;
 }
 
 #hero h2 {
@@ -95,7 +95,7 @@ section + section {
 .quick-pick {
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #f9a8d4;
   background: #ffffff;
   color: var(--color-text);
   font-size: 0.85rem;
@@ -104,7 +104,7 @@ section + section {
 
 .quick-pick:hover {
   border-color: var(--color-accent);
-  background: #eef2ff;
+  background: #fdf2f8;
 }
 
 .quick-pick:focus-visible {
